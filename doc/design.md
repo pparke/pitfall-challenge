@@ -29,3 +29,34 @@
 - [ ] player given 3 lives
   - [ ] must decrement a life each time they die
   - [ ] game restarts on death
+
+
+# Folder Structure
+- **Assets**
+  - Animation
+    - Clips
+    - Controllers
+  - Audio
+    - Enemy
+    - FX
+    - Music
+    - Player
+  - Fonts
+  - Materials
+  - Physics Materials
+  - Prefabs
+    - Characters
+    - Environment
+    - FX
+    - Props
+    - UI
+ - Scenes
+ - Scripts
+ - Sprites
+   - Characters
+   - Environment
+   - FX
+   - Props
+   - UI
+
+# Class List

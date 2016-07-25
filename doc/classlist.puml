@@ -1,0 +1,22 @@
+@startuml
+class Player {
+ - speed : int
+ + lives : int
+ + score : int
+ + time : int
+ void jump()
+ void onCollisionEnter()
+}
+
+class Crocodile {
+ + mouthOpen : bool
+}
+
+class Barrel {
+ - speed : int
+}
+
+class Vine {
+ - speed : int
+}
+@enduml
