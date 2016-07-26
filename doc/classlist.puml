@@ -4,8 +4,13 @@ class Player {
  + lives : int
  + score : int
  + time : int
+ + swinging : bool
+ + falling : bool
  void jump()
- void onCollisionEnter()
+ void die()
+ void reduceScore(int amt)
+ void reduceLives()
+ void takeDamage(int amt)
 }
 
 class Crocodile {
@@ -18,5 +23,11 @@ class Barrel {
 
 class Vine {
  - speed : int
+ void OnCollisionEnter()
+}
+
+class Obstacle {
+  void OnCollisionEnter()
+  + damage : int
 }
 @enduml
