@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: dd42e53203a90f14aa4f7d623c591068
+timeCreated: 1469495014
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pitfall_character_0
+    21300002: pitfall_character_1
+    21300004: pitfall_character_2
+    21300006: pitfall_character_3
+    21300008: pitfall_character_4
+    21300010: pitfall_character_5
+    21300012: pitfall_character_6
+    21300014: pitfall_character_7
+    21300016: pitfall_character_8
+    21300018: pitfall_character_9
+    21300020: pitfall_character_10
+    21300022: pitfall_character_11
+    21300024: pitfall_character_12
+    21300026: pitfall_character_13
+    21300028: pitfall_character_14
+    21300030: pitfall_character_15
+    21300032: pitfall_character_16
+    21300034: pitfall_character_17
+    21300036: pitfall_character_18
+    21300038: pitfall_character_19
+    21300040: pitfall_character_20
+    21300042: pitfall_character_21
+    21300044: pitfall_character_22
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pitfall_character_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8, y: 9}
+        - {x: -12, y: 8}
+        - {x: -12, y: -13}
+        - {x: -10, y: -16}
+        - {x: 10, y: -16}
+        - {x: 10, y: 9}
+    - name: pitfall_character_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 10}
+        - {x: -11, y: 2}
+        - {x: -11, y: -5}
+        - {x: -7, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -14}
+        - {x: 11, y: 5}
+        - {x: 10, y: 10}
+    - name: pitfall_character_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 9}
+        - {x: -11, y: 3}
+        - {x: -11, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: 7}
+        - {x: 7, y: 9}
+    - name: pitfall_character_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: -9}
+        - {x: -7, y: -16}
+        - {x: 12, y: -16}
+        - {x: 12, y: 4}
+        - {x: 10, y: 10}
+        - {x: -6, y: 10}
+        - {x: -11, y: 5}
+    - name: pitfall_character_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 8}
+        - {x: -10, y: 4}
+        - {x: -10, y: -14}
+        - {x: -9, y: -16}
+        - {x: 11, y: -16}
+        - {x: 12, y: -12}
+        - {x: 12, y: 5}
+        - {x: 9, y: 8}
+    - name: pitfall_character_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 10}
+        - {x: -11, y: 4}
+        - {x: -11, y: -12}
+        - {x: -9, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -11}
+        - {x: 11, y: 7}
+        - {x: 7, y: 10}
+    - name: pitfall_character_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 10}
+        - {x: -11, y: 4}
+        - {x: -11, y: -7}
+        - {x: -7, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: 7}
+        - {x: 10, y: 10}
+    - name: pitfall_character_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 8}
+        - {x: -11, y: 1}
+        - {x: -11, y: -11}
+        - {x: -5, y: -16}
+        - {x: 9, y: -16}
+        - {x: 12, y: -15}
+        - {x: 12, y: 3}
+        - {x: 8, y: 8}
+    - name: pitfall_character_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 9}
+        - {x: -12, y: 2}
+        - {x: -12, y: -5}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 11, y: -14}
+        - {x: 11, y: 4}
+        - {x: 7, y: 9}
+    - name: pitfall_character_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 9}
+        - {x: -14, y: 2}
+        - {x: -14, y: -5}
+        - {x: -9, y: -16}
+        - {x: 7, y: -16}
+        - {x: 10, y: -14}
+        - {x: 10, y: -2}
+        - {x: 6, y: 9}
+    - name: pitfall_character_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 9}
+        - {x: -11, y: 2}
+        - {x: -11, y: -8}
+        - {x: -8, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: 5}
+        - {x: 10, y: 9}
+    - name: pitfall_character_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 9}
+        - {x: -11, y: 2}
+        - {x: -11, y: -6}
+        - {x: -7, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -12}
+        - {x: 11, y: 6}
+        - {x: 8, y: 9}
+    - name: pitfall_character_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 9}
+        - {x: -11, y: 1}
+        - {x: -11, y: -6}
+        - {x: -8, y: -16}
+        - {x: 11, y: -16}
+        - {x: 11, y: 7}
+        - {x: 7, y: 9}
+    - name: pitfall_character_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 9}
+        - {x: -11, y: 0}
+        - {x: -11, y: -5}
+        - {x: -8, y: -9}
+        - {x: -6, y: -16}
+        - {x: 8, y: -16}
+        - {x: 11, y: -11}
+        - {x: 11, y: 7}
+        - {x: 5, y: 9}
+    - name: pitfall_character_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 10}
+        - {x: -11, y: 2}
+        - {x: -11, y: -5}
+        - {x: -7, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -14}
+        - {x: 11, y: 5}
+        - {x: 10, y: 10}
+    - name: pitfall_character_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9, y: -16}
+        - {x: 11, y: -15}
+        - {x: 11, y: 6}
+        - {x: 10, y: 9}
+        - {x: -11, y: 9}
+        - {x: -11, y: -16}
+    - name: pitfall_character_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 6}
+        - {x: 7, y: 9}
+        - {x: 4, y: 10}
+        - {x: -5, y: 10}
+        - {x: -11, y: 4}
+        - {x: -11, y: -15}
+        - {x: -9, y: -16}
+        - {x: 10, y: -16}
+        - {x: 12, y: -13}
+        - {x: 12, y: 1}
+        - {x: 11, y: 3}
+    - name: pitfall_character_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 9}
+        - {x: -11, y: -1}
+        - {x: -11, y: -9}
+        - {x: -9, y: -12}
+        - {x: -6, y: -16}
+        - {x: 9, y: -16}
+        - {x: 11, y: -13}
+        - {x: 11, y: 4}
+        - {x: 6, y: 9}
+    - name: pitfall_character_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 10}
+        - {x: -10, y: 5}
+        - {x: -10, y: -11}
+        - {x: -9, y: -16}
+        - {x: 9, y: -16}
+        - {x: 11, y: -7}
+        - {x: 11, y: 4}
+        - {x: 8, y: 10}
+    - name: pitfall_character_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 10}
+        - {x: -5, y: 9}
+        - {x: -10, y: 5}
+        - {x: -10, y: -9}
+        - {x: -8, y: -16}
+        - {x: 8, y: -16}
+        - {x: 11, y: -8}
+        - {x: 11, y: 5}
+        - {x: 6, y: 10}
+    - name: pitfall_character_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 10}
+        - {x: -10, y: 5}
+        - {x: -10, y: -11}
+        - {x: -9, y: -16}
+        - {x: 9, y: -16}
+        - {x: 11, y: -7}
+        - {x: 11, y: 4}
+        - {x: 8, y: 10}
+    - name: pitfall_character_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 10}
+        - {x: -10, y: 4}
+        - {x: -10, y: -6}
+        - {x: -7, y: -15}
+        - {x: -7, y: -16}
+        - {x: 10, y: -16}
+        - {x: 11, y: -15}
+        - {x: 11, y: 5}
+        - {x: 10, y: 10}
+    - name: pitfall_character_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 9}
+        - {x: 3, y: 10}
+        - {x: -3, y: 10}
+        - {x: -10, y: 8}
+        - {x: -10, y: -15}
+        - {x: -9, y: -16}
+        - {x: 9, y: -16}
+        - {x: 11, y: -14}
+        - {x: 11, y: 2}
+        - {x: 9, y: 6}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
