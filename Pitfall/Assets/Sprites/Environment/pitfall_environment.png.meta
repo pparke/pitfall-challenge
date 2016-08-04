@@ -1,0 +1,614 @@
+fileFormatVersion: 2
+guid: f9cbbd0df4fd93d48a16433b358876d9
+timeCreated: 1469726727
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: pitfall_environment_0
+    21300002: pitfall_environment_1
+    21300004: pitfall_environment_2
+    21300006: pitfall_environment_3
+    21300008: pitfall_environment_4
+    21300010: pitfall_environment_5
+    21300012: pitfall_environment_6
+    21300014: pitfall_environment_7
+    21300016: pitfall_environment_8
+    21300018: pitfall_environment_9
+    21300020: pitfall_environment_10
+    21300022: pitfall_environment_11
+    21300024: pitfall_environment_12
+    21300026: pitfall_environment_13
+    21300028: pitfall_environment_14
+    21300030: pitfall_environment_15
+    21300032: pitfall_environment_16
+    21300034: pitfall_environment_17
+    21300036: pitfall_environment_18
+    21300038: pitfall_environment_19
+    21300040: pitfall_environment_20
+    21300042: pitfall_environment_21
+    21300044: pitfall_environment_22
+    21300046: pitfall_environment_23
+    21300048: pitfall_environment_24
+    21300050: pitfall_environment_25
+    21300052: pitfall_environment_26
+    21300054: pitfall_environment_27
+    21300056: pitfall_environment_28
+    21300058: pitfall_environment_29
+    21300060: pitfall_environment_30
+    21300062: pitfall_environment_31
+    21300064: pitfall_environment_32
+    21300066: pitfall_environment_33
+    21300068: pitfall_environment_34
+    21300070: pitfall_environment_35
+    21300072: pitfall_environment_36
+    21300074: pitfall_environment_37
+    21300076: pitfall_environment_38
+    21300078: pitfall_environment_39
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: pitfall_environment_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 192
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -96, y: 40}
+        - {x: -96, y: -19}
+        - {x: -58, y: -40}
+        - {x: 50, y: -40}
+        - {x: 96, y: -12}
+        - {x: 96, y: 40}
+    - name: pitfall_environment_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 432
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 40}
+        - {x: -72, y: -11}
+        - {x: -41, y: -40}
+        - {x: 38, y: -40}
+        - {x: 72, y: -10}
+        - {x: 72, y: 40}
+    - name: pitfall_environment_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 416
+        width: 288
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -144, y: 48}
+        - {x: -144, y: -4}
+        - {x: -126, y: -10}
+        - {x: -46, y: -48}
+        - {x: 44, y: -48}
+        - {x: 144, y: -2}
+        - {x: 144, y: 48}
+    - name: pitfall_environment_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 386
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 20}
+        - {x: -17, y: -11}
+        - {x: -3, y: -20}
+        - {x: 10, y: -20}
+        - {x: 17, y: -2}
+        - {x: 17, y: 20}
+    - name: pitfall_environment_4
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 289
+        width: 70
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 37}
+        - {x: 19, y: 32}
+        - {x: 35, y: 45}
+        - {x: 35, y: 64}
+        - {x: -23, y: 64}
+        - {x: -26, y: 63}
+        - {x: -22, y: 48}
+        - {x: -17, y: 45}
+        - {x: -18, y: 40}
+        - {x: -20, y: 46}
+        - {x: -22, y: 48}
+        - {x: -35, y: 59}
+        - {x: -35, y: -64}
+        - {x: 16, y: -64}
+        - {x: 28, y: 17}
+        - {x: 4, y: 27}
+        - {x: 0, y: 23}
+    - name: pitfall_environment_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 289
+        width: 89
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44.5, y: 64}
+        - {x: -44.5, y: 64}
+        - {x: -44.5, y: 6}
+        - {x: -27.5, y: -64}
+        - {x: 24.5, y: -64}
+        - {x: 23.5, y: -61}
+        - {x: 19.5, y: -60}
+        - {x: 44.5, y: 35}
+    - name: pitfall_environment_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 296
+        width: 10
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 323
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_8
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 323
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_9
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 323
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_10
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 323
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_11
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 284
+        width: 35
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_12
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 284
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_13
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 284
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 157
+        width: 64
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 60.5}
+        - {x: -32, y: -60.5}
+        - {x: 32, y: -60.5}
+        - {x: 32, y: 60.5}
+    - name: pitfall_environment_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 157
+        width: 66
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31, y: 60.5}
+        - {x: -33, y: 60.5}
+        - {x: -33, y: -60.5}
+        - {x: 31, y: -60.5}
+        - {x: 33, y: -59.5}
+        - {x: 33, y: 59.5}
+    - name: pitfall_environment_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 64
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 115}
+        - {x: -32, y: -115}
+        - {x: 32, y: -115}
+        - {x: 32, y: 115}
+    - name: pitfall_environment_17
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 110
+        width: 12
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_18
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 247
+        width: 49
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_19
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 246
+        width: 86
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_20
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 161
+        width: 389
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67.5, y: -37.5}
+        - {x: -72.5, y: -49.5}
+        - {x: -67.5, y: -60.5}
+        - {x: 190.5, y: -60.5}
+        - {x: 191.5, y: -59.5}
+        - {x: 192.5, y: 25.5}
+        - {x: 194.5, y: 25.5}
+        - {x: 194.5, y: 60.5}
+        - {x: -194.5, y: 60.5}
+        - {x: -194.5, y: -60.5}
+        - {x: -131.5, y: -60.5}
+        - {x: -127.5, y: -56.5}
+        - {x: -128.5, y: -38.5}
+    - name: pitfall_environment_21
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 208
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_22
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 208
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_23
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 208
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_24
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 208
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_25
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 208
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_26
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 208
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_27
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 208
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_28
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 176
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_29
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 176
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_30
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 176
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_31
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 139
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_32
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 139
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_33
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 139
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_34
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 100
+        width: 238
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_36
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 80
+        width: 236
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_37
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 40
+        width: 238
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_38
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 21
+        width: 234
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: pitfall_environment_39
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 176
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

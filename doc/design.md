@@ -1,18 +1,18 @@
 # Requirements
 
 ## Player Abilities
-- [ ] ability to run left and right
-- [ ] jump
+- [x] ability to run left and right
+- [x] jump
 - [ ] take damage
 - [ ] die
 
 ## Environment
-- [ ] contains upper and lower level
+- [x] contains upper and lower level
 - [ ] 1 long scene (camera moves smoothly with player character)
 
 ## Enemy/obstacle type per screen
 - [ ] holes to jump over
-  - [ ] player falls to lower level
+  - [x] player falls to lower level
   - [ ] player falls off-screen into pit (death)
 - [ ] barrel
   - [ ] spawns continually
@@ -20,12 +20,12 @@
   - [ ] causes player damage on touch
 - [ ] crocodile
   - crocodiles have two states
-    - [ ] mouth closed (safe to jump on)
+    - [x] mouth closed (safe to jump on)
     - [ ] mouth open (fatal to player)
-- [ ] swinging vine
-  - [ ] vine swings left and right
-  - [ ] on colliding with vine, player character becomes attached
-  - [ ] on pressing jump, player character detaches
+- [x] swinging vine
+  - [x] vine swings left and right
+  - [x] on colliding with vine, player character becomes attached
+  - [x] on pressing jump, player character detaches
 - [ ] player given 3 lives
   - [ ] must decrement a life each time they die
   - [ ] game restarts on death
@@ -47,6 +47,7 @@
   - Prefabs
     - Characters
     - Environment
+    - Obstacles
     - FX
     - Props
     - UI
@@ -55,6 +56,7 @@
  - Sprites
    - Characters
    - Environment
+   - Obstacles
    - FX
    - Props
    - UI

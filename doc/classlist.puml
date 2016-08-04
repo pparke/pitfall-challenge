@@ -1,11 +1,35 @@
 @startuml
-class Player {
- - speed : int
+class CharacterMovement {
+ - playerSprite : GameObject
+ - rigidbody2d : Rigidbody2D
+ - animator : Animator
+ - horizontalAxis : float
+ - verticalAxis : float
+ - facingRight : bool
+ - grounded : bool
+ + groundCheck : Collider2D
+ + groundMask : LayerMask
+ + speed : float
+ - climbing : bool
+ + onLadder : bool
+ - prevGravity : float
+ + jumpForce : float
+ - jumpPressed : bool
+ - jumping : bool
  + lives : int
  + score : int
  + time : int
- void jump()
- void onCollisionEnter()
+ void Awake()
+ void Update()
+ void FixedUpdate()
+ void CheckGrounded()
+ void RunHandler()
+ void JumpHandler()
+ void LadderHandler()
+ void Flip()
+ void Jump()
+ void BeginClimbing()
+ void StopClimbing()
 }
 
 class Crocodile {
@@ -16,7 +40,9 @@ class Barrel {
  - speed : int
 }
 
-class Vine {
- - speed : int
+class VineController {
+ + amplitude : float
+ + period : float
+ - elapsedTime : float
 }
 @enduml
