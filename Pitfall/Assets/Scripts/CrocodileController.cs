@@ -19,9 +19,10 @@ public class CrocodileController : MonoBehaviour {
     {
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName("closed"))
         {
-            if (coll.gameObject.tag == "Player")
+            Debug.Log(coll.gameObject.name);
+            if (coll.gameObject.name == "Mouth" && coll.gameObject.tag == "Player")
             {
-                coll.gameObject.SendMessage("Kill", "crocodile");
+                coll.gameObject.SendMessage("Kill");
             }
         }
         

@@ -57,6 +57,7 @@ public class ClimbState : IPlayerState {
         // save the player's gravity state and disable gravity
         prevGravity = player.rigidbody2d.gravityScale;
         player.rigidbody2d.gravityScale = 0.0f;
+        player.animator.SetBool("climbing", true);
     }
 
     // called before state left
@@ -64,5 +65,6 @@ public class ClimbState : IPlayerState {
     {
         // restore the player's previous gravity state
         player.rigidbody2d.gravityScale = prevGravity;
+        player.animator.SetBool("climbing", false);
     }
 }

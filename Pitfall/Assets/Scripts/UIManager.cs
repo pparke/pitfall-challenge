@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour {
 
     private static Text scoreText;
     private static Text timeText;
+    private static Text livesText;
 
     void Awake ()
     {

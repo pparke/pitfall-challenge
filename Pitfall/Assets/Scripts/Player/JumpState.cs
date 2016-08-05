@@ -37,8 +37,6 @@ public class JumpState : IPlayerState {
     // collision with a trigger
     public void onTriggerEnter(Collider2D coll)
     {
-        Debug.Log(coll.gameObject.tag);
-        Debug.Log(coll.gameObject.CompareTag("ladder"));
         if (coll.gameObject.CompareTag("ladder") && player.verticalAxis != 0.0f)
         {
             player.collidedWith = coll;

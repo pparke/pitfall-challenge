@@ -12,6 +12,9 @@ public class FollowCamera : MonoBehaviour {
     // camera pan speed
     public float panSpeed = 2.5f;
 
+    public float minY = -0.1f;
+    public float maxY = 2.0f;
+
     // the player reference to be assigned in the inspector
     public Transform player;
 	
@@ -25,6 +28,7 @@ public class FollowCamera : MonoBehaviour {
         if (pastBuffer())
         {
             target.x = Mathf.Lerp(transform.position.x, player.position.x, panSpeed * Time.fixedDeltaTime);
+            target.y = Mathf.Clamp(Mathf.Lerp(transform.position.y, player.position.y, panSpeed * Time.fixedDeltaTime), minY, maxY);
         }
 
         // move the camera by the required amount
@@ -36,6 +40,6 @@ public class FollowCamera : MonoBehaviour {
      */
     bool pastBuffer ()
     {
-        return Mathf.Abs(transform.position.x - player.position.x) > buffer;
+        return Mathf.Abs(transform.position.x - player.position.x) > buffer || Mathf.Abs(transform.position.y - player.position.x) > buffer;
     }
 }

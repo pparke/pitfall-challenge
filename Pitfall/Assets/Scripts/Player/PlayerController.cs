@@ -13,7 +13,11 @@ public class PlayerController : MonoBehaviour {
     // player's sprite GameObject
     private GameObject playerSprite;
 
+    // the game manager reference
+    private GameManager gameManager;
+
     // rigidbody component of the player
+    [HideInInspector]
     public Rigidbody2D rigidbody2d;
 
     // animator component for the player
@@ -55,6 +59,12 @@ public class PlayerController : MonoBehaviour {
     // the direction the sprite is facing
     public bool facingRight = true;
 
+    // the players score (also used as health)
+    public int score = 2000;
+
+    // the number of lives the player has left
+    public int lives = 3;
+
 
 
     void Awake () {
@@ -64,10 +74,15 @@ public class PlayerController : MonoBehaviour {
         states["jump"]      = new JumpState(this);
         states["climb"]     = new ClimbState(this);
         states["swing"]     = new SwingState(this);
+        states["damage"]    = new DamageState(this);
+        states["dead"]      = new DeadState(this);
 
         // initialize component references
         playerSprite = transform.Find("PlayerSprite").gameObject;
         rigidbody2d = (Rigidbody2D)GetComponent(typeof(Rigidbody2D));
+
+        // get a reference to the game manager
+        gameManager = (GameManager)GameObject.Find("GameManager").GetComponent(typeof(GameManager));
 
         // get the animator of the player's sprite
         animator = (Animator)playerSprite.GetComponent(typeof(Animator));
@@ -77,6 +92,11 @@ public class PlayerController : MonoBehaviour {
     {
         currentState = states["ground"];
         currentState.enter();
+
+        // display player's score
+        UIManager.SetScore(score);
+
+        // display player's lives
     }
 	
 	// Update is called once per frame
@@ -170,5 +190,49 @@ public class PlayerController : MonoBehaviour {
         Vector3 scale = playerSprite.transform.localScale;
         scale.x *= -1;
         playerSprite.transform.localScale = scale;
+    }
+
+    /**
+     * Kill the player, change to the dead state and reset to the nearest checkpoint
+     * if any lives remain, otherwise reset the game.
+     */
+    public void Kill ()
+    {
+        ChangeState("dead");
+        lives -= 1;
+        if (lives <= 0)
+        {
+            gameManager.Reset();
+        }
+        else
+        {
+            gameManager.ResetPlayer();
+        }
+    }
+
+    /**
+     * Inflicts damage on the player by reducing their score.
+     */
+    public void TakeDamage (int amt)
+    {
+        Debug.Log("Taking damage");
+        // reduce player's score
+        score -= amt;
+
+        // update score display
+        UIManager.SetScore(score);
+
+        ChangeState("damage");
+    }
+
+    /**
+     * Reset the player to its beginning state
+     */
+    public void Reset ()
+    {
+        lives = 3;
+        score = 2000;
+        ChangeState("ground");
+        UIManager.SetScore(score);
     }
 }

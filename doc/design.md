@@ -3,7 +3,7 @@
 ## Player Abilities
 - [x] ability to run left and right
 - [x] jump
-- [ ] take damage
+- [x] take damage
 - [ ] die
 
 ## Environment
@@ -14,10 +14,10 @@
 - [ ] holes to jump over
   - [x] player falls to lower level
   - [ ] player falls off-screen into pit (death)
-- [ ] barrel
-  - [ ] spawns continually
-  - [ ] rolls across screen
-  - [ ] causes player damage on touch
+- [x] barrel
+  - [x] spawns continually
+  - [x] rolls across screen
+  - [x] causes player damage on touch
 - [ ] crocodile
   - crocodiles have two states
     - [x] mouth closed (safe to jump on)
