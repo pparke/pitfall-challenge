@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Defines player behaviour while climbing a ladder
+ * based on https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
+ */
 public class ClimbState : IPlayerState {
 
     private readonly PlayerController player;
@@ -25,7 +29,6 @@ public class ClimbState : IPlayerState {
     {
         if (player.jumpPressed)
         {
-            player.horizontalForce = player.horizontalAxis * player.speed;
             player.ChangeState("jump");
         }
     }

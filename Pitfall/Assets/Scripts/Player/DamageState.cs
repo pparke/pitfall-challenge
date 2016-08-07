@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * State providing behaviour for player when damaged.
+ * based on https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
+ */
 public class DamageState : IPlayerState {
 
     private readonly PlayerController player;
@@ -14,7 +18,9 @@ public class DamageState : IPlayerState {
     }
 
 
-    // physics related update
+    /**
+     * Exit the damage state after a suitable delay and once the player is grounded again.
+     */
     public void fixedUpdate ()
     {
         if (Time.time > enterTime + exitDelay && player.CheckGrounded())
@@ -43,10 +49,13 @@ public class DamageState : IPlayerState {
 
     }
 
-    // called when state entered
+    /**
+     * Play the damage animation, record the start time,
+     * and stop player movement.
+     */
     public void enter ()
     {
-        player.animator.SetBool("damage", true);
+        player.animator.SetTrigger("damage");
         enterTime = Time.time;
         player.rigidbody2d.velocity = Vector2.zero;
     }
@@ -54,8 +63,5 @@ public class DamageState : IPlayerState {
     // called before state left
     public void exit ()
     {
-        Debug.Log("leaving damage state");
-        player.animator.SetBool("damage", false);
-        
     }
 }

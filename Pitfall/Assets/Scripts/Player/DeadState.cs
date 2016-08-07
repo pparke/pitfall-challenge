@@ -1,9 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Defines player behaviour when dead
+ * based on https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
+ */
 public class DeadState : IPlayerState {
 
     private readonly PlayerController player;
+
+    // reference to the state machine behaviour used to listen for events during animation
+    private PlayerDeadBehaviour playerDead;
 
     public DeadState (PlayerController playerController)
     {
@@ -36,17 +43,26 @@ public class DeadState : IPlayerState {
 
     }
 
-    // called when state entered
-    public void enter ()
+    /**
+     * Decrement lives and play the death animation
+     */
+public void enter ()
     {
-        player.animator.SetBool("dead", true);
+        // stop all movement
         player.rigidbody2d.velocity = Vector2.zero;
+        // remove lives
+        player.lives -= 1;
+        // start death animation
+        player.animator.SetTrigger("dead");
+        // get the PlayerDead behaviour
+        playerDead = player.animator.GetBehaviour<PlayerDeadBehaviour>();
+        // give it our player reference so it can change state once complete
+        playerDead.player = player;
     }
 
     // called before state left
     public void exit ()
     {
-        player.animator.SetBool("dead", false);
-
+        
     }
 }

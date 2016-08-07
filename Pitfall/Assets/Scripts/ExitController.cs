@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Toggles the parent segment on or off
+ */
 public class ExitController : MonoBehaviour {
 
     private SegmentData segment;
@@ -11,11 +14,14 @@ public class ExitController : MonoBehaviour {
         segment = (SegmentData)transform.parent.GetComponent(typeof(SegmentData));
     }
 
+    /**
+     * If the player crosses the exit, toggle this segment
+     */
 	void OnTriggerEnter2D (Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            segment.Exit();
+            segment.Toggle();
         }
     }
 }

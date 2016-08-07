@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Defines player behaviour when they are swinging on a vine
+ * based on https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
+ */
 public class SwingState : IPlayerState {
 
     private readonly PlayerController player;
@@ -27,7 +31,6 @@ public class SwingState : IPlayerState {
     {
         if (player.jumpPressed)
         {
-            player.horizontalForce = player.horizontalAxis * player.speed;
             player.ChangeState("jump");
         }
     }
@@ -49,7 +52,9 @@ public class SwingState : IPlayerState {
     }
 
 
-    // called when state entered
+    /**
+     * Disables gravity on the player and attaches them to the vine using a hinge joint
+     */
     public void enter()
     {
         // save gravity state and disable for player
@@ -86,7 +91,9 @@ public class SwingState : IPlayerState {
         hingejoint2d.limits = limits;
     }
 
-    // called before state left
+    /**
+     * Restores gravity and removes the hinge joint
+     */
     public void exit()
     {
         // restore gravity state, set rotation back to 0 and freeze

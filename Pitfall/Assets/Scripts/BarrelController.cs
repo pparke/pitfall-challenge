@@ -59,7 +59,6 @@ public class BarrelController : MonoBehaviour {
     {
         // get the position of the barrel in viewport coords
         Vector3 pos = mainCamera.WorldToViewportPoint(transform.position);
-        Debug.Log(pos.x);
         return pos.x <= offscreenLeft;
     }
 }

@@ -4,36 +4,38 @@
 - [x] ability to run left and right
 - [x] jump
 - [x] take damage
-- [ ] die
+- [x] die
 
 ## Environment
 - [x] contains upper and lower level
 - [ ] 1 long scene (camera moves smoothly with player character)
 
 ## Enemy/obstacle type per screen
-- [ ] holes to jump over
+- [x] holes to jump over
   - [x] player falls to lower level
-  - [ ] player falls off-screen into pit (death)
+  - [x] player falls off-screen into pit (death)
 - [x] barrel
   - [x] spawns continually
   - [x] rolls across screen
   - [x] causes player damage on touch
-- [ ] crocodile
+- [x] crocodile
   - crocodiles have two states
     - [x] mouth closed (safe to jump on)
-    - [ ] mouth open (fatal to player)
+    - [x] mouth open (fatal to player)
 - [x] swinging vine
   - [x] vine swings left and right
   - [x] on colliding with vine, player character becomes attached
   - [x] on pressing jump, player character detaches
-- [ ] player given 3 lives
-  - [ ] must decrement a life each time they die
+- [ ] lives
+  - [x] player given 3 lives
+  - [x] must decrement a life each time they die
   - [ ] game restarts on death
 
 
 # Folder Structure
 - **Assets**
   - Animation
+    - Behaviours
     - Clips
     - Controllers
   - Audio
@@ -47,17 +49,21 @@
   - Prefabs
     - Characters
     - Environment
+	- FX
     - Obstacles
-    - FX
     - Props
     - UI
  - Scenes
  - Scripts
+   - Editor
+   - Interfaces
+   - Player
+ - Shaders
  - Sprites
    - Characters
+   - Effects
    - Environment
    - Obstacles
-   - FX
    - Props
    - UI
 

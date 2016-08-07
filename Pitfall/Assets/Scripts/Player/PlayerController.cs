@@ -2,6 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Main player controller script.  Contains fields and methods used by various states
+ * delegates most events to the current state.
+ */
 public class PlayerController : MonoBehaviour {
 
     // the current state being used
@@ -14,7 +18,8 @@ public class PlayerController : MonoBehaviour {
     private GameObject playerSprite;
 
     // the game manager reference
-    private GameManager gameManager;
+    [HideInInspector]
+    public GameManager gameManager;
 
     // rigidbody component of the player
     [HideInInspector]
@@ -38,11 +43,20 @@ public class PlayerController : MonoBehaviour {
     // amount of force to apply to the player on jump
     public float jumpForce = 10.0f;
 
-    // amount of horizontal force to apply to the player during a jump
-    public float horizontalForce = 0.0f;
+    // force to be added when the player holds the jump button
+    public float jumpBoost = 20.0f;
+
+    // amount of horizontal force to apply to the player as part of a jump
+    public float horizontalForce = 2.0f;
+
+    // amount of horizontal force to apply when changing direction during a jump
+    public float horizontalCorrection = 0.5f;
 
     // jump button was pressed
     public bool jumpPressed = false;
+
+    // the amount of time the jump button has been pressed down
+    public float jumpPressedDuration;
 
     // horizontal axis input -1.0 to 1.0
     public float horizontalAxis;
@@ -66,7 +80,6 @@ public class PlayerController : MonoBehaviour {
     public int lives = 3;
 
 
-
     void Awake () {
         // setup states
         states = new Dictionary<string, IPlayerState>();
@@ -76,6 +89,7 @@ public class PlayerController : MonoBehaviour {
         states["swing"]     = new SwingState(this);
         states["damage"]    = new DamageState(this);
         states["dead"]      = new DeadState(this);
+        states["limbo"]     = new LimboState(this);
 
         // initialize component references
         playerSprite = transform.Find("PlayerSprite").gameObject;
@@ -99,10 +113,23 @@ public class PlayerController : MonoBehaviour {
         // display player's lives
     }
 	
-	// Update is called once per frame
+	/**
+     * Save input and update the current state
+     */
 	void Update () {
-        // check if space is pressed
-        jumpPressed = Input.GetAxis("Jump") > 0;
+        // check if jump button is pressed
+        if (Input.GetAxis("Jump") > 0)
+        {
+            // increment the jump pressed duration while the button is down
+            jumpPressedDuration += Time.deltaTime;
+            jumpPressed = true;
+        }
+        else
+        {
+            // reset duration if button is released
+            jumpPressedDuration = 0.0f;
+            jumpPressed = false;
+        }
 
         // get the horizontal input
         horizontalAxis = Input.GetAxis("Horizontal");
@@ -114,7 +141,10 @@ public class PlayerController : MonoBehaviour {
         currentState.update();
     }
 
-    // Physics update
+    /**
+     * Keep x and y speed on the animator up to date and
+     * call fixed update on the current state.
+     */
     void FixedUpdate ()
     {
         // set animator parameters
@@ -125,7 +155,7 @@ public class PlayerController : MonoBehaviour {
         currentState.fixedUpdate();
     }
 
-    // Trigger 2D entered, pass to current state
+    // Pass all trigger events to current state
     void OnTriggerEnter2D (Collider2D coll)
     {
         currentState.onTriggerEnter(coll);
@@ -167,8 +197,8 @@ public class PlayerController : MonoBehaviour {
         Collider2D coll = Physics2D.OverlapCircle(groundCheck.bounds.center, groundCheck.bounds.extents.x, groundMask);
         if (coll)
         {
-            // check if the collider we contacted is below our groundCheck collider
-            // TODO: won't work for angled surfaces who's max y is not level with the ground surface
+            // check if the top of the collider we contacted is below our groundCheck collider
+            // TODO: won't work for angled surfaces whos max y is not level with the ground surface
             if (coll.bounds.max.y < groundCheck.bounds.center.y)
             {
                 return true;
@@ -176,6 +206,21 @@ public class PlayerController : MonoBehaviour {
         }
 
         return false;
+    }
+
+    /**
+     * Make the sprite face the direction it is travelling.
+     */
+    public void FaceForward ()
+    {
+        if (horizontalAxis > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (horizontalAxis < 0 && facingRight)
+        {
+            Flip();
+        }
     }
 
     /**
@@ -193,20 +238,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     /**
-     * Kill the player, change to the dead state and reset to the nearest checkpoint
-     * if any lives remain, otherwise reset the game.
+     * Change to dead state
      */
     public void Kill ()
     {
-        ChangeState("dead");
-        lives -= 1;
-        if (lives <= 0)
+        Debug.Log("killing player");
+        // only enter state if not already in it
+        if (currentState != states["dead"])
         {
-            gameManager.Reset();
-        }
-        else
-        {
-            gameManager.ResetPlayer();
+            ChangeState("dead");
         }
     }
 
@@ -235,4 +275,22 @@ public class PlayerController : MonoBehaviour {
         ChangeState("ground");
         UIManager.SetScore(score);
     }
+
+    /**
+     * Move the player to the given position
+     */
+    public void Reposition (Vector2 pos)
+    {
+        rigidbody2d.position = pos;
+    }
+
+    /**
+     * Re-enable the player (just changes back to default state for now)
+     */
+    public void Revive ()
+    {
+        ChangeState("ground");
+    }
+
+    
 }

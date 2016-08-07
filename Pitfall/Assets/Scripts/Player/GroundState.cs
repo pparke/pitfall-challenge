@@ -5,57 +5,34 @@ public class GroundState : IPlayerState {
 
     private readonly PlayerController player;
 
-    private float moveDuration = 0.0f;
-    private float runTime = 1.0f;
-    private float runBoost = 2.0f;
-    private float currentSpeed;
+    private float targetSpeed;
 
     public GroundState(PlayerController playerController)
     {
         player = playerController;
     }
 
-    // physics related update
+    /**
+     * Check if the player is grounded and move based on horizontal input if they are
+     */
     public void fixedUpdate()
     {
         if (player.CheckGrounded())
         {
-            // calculate current speed based on horizontal input
-            currentSpeed = player.horizontalAxis * player.speed;
-
-            // keep track of how long the player has been moving
-            if (player.horizontalAxis != 0.0f)
-            {
-                moveDuration += Time.deltaTime;
-            }
-            // if the player stops moving reset the move duration
-            else
-            {
-                moveDuration = 0.0f;
-            }
-
-            // if the player has been moving long enough, add a boost to speed
-            if (moveDuration >= runTime)
-            {
-                currentSpeed += Mathf.Sign(currentSpeed) * runBoost;
-            }
+            // calculate target speed based on horizontal input
+            targetSpeed = player.horizontalAxis * player.speed;
 
             // set the horizontal velocity based on how far the H axis is pressed
-            player.rigidbody2d.velocity = new Vector2(currentSpeed, player.rigidbody2d.velocity.y);
+            player.rigidbody2d.velocity = new Vector2(targetSpeed, player.rigidbody2d.velocity.y);
         }
 
         // flip the sprite based on the direction it's moving
-        if (player.horizontalAxis > 0 && !player.facingRight)
-        {
-            player.Flip();
-        }
-        else if (player.horizontalAxis < 0 && player.facingRight)
-        {
-            player.Flip();
-        }
+        player.FaceForward();
     }
 
-    // called every frame
+    /**
+     * Change to the jump state if jump is pressed
+     */
     public void update()
     {
         if (player.jumpPressed)
@@ -64,18 +41,15 @@ public class GroundState : IPlayerState {
         }
     }
 
-    // collision with a trigger
+    /**
+     * Allow transition to the climb state
+     */
     public void onTriggerEnter(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("ladder") && player.verticalAxis != 0.0f)
         {
             player.collidedWith = coll;
             player.ChangeState("climb");
-        }
-        else if (coll.gameObject.CompareTag("vine"))
-        {
-            player.collidedWith = coll;
-            player.ChangeState("swing");
         }
     }
 
@@ -85,11 +59,6 @@ public class GroundState : IPlayerState {
         {
             player.collidedWith = coll;
             player.ChangeState("climb");
-        }
-        else if (coll.gameObject.CompareTag("vine"))
-        {
-            player.collidedWith = coll;
-            player.ChangeState("swing");
         }
     }
 
@@ -102,7 +71,6 @@ public class GroundState : IPlayerState {
     // called when state entered
     public void enter()
     {
-        player.horizontalForce = 0.0f;
     }
 
     // called before state left

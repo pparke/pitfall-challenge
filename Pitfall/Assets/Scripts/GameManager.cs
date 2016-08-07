@@ -26,7 +26,9 @@ public class GameManager : MonoBehaviour {
         player = (PlayerController)GameObject.Find("Player").GetComponent(typeof(PlayerController));
     }
 	
-	// called once per second to update the clock
+    /**
+	 * Called once per second to update the clock
+     */
 	void Tick () {
         timeRemaining -= 1;
         UIManager.SetTime((int)Mathf.Floor(timeRemaining / 60), (int)timeRemaining % 60);
@@ -37,8 +39,8 @@ public class GameManager : MonoBehaviour {
      */
     public void ResetPlayer ()
     {
-        Debug.Log("Player reset");
-        player.transform.position = checkpoint.transform.position;
+        player.Reposition(new Vector2(checkpoint.transform.position.x, checkpoint.transform.position.y + 5));
+        player.Invoke("Revive", 0.5f);
     }
 
     /**
@@ -48,7 +50,9 @@ public class GameManager : MonoBehaviour {
     {
         Debug.Log("Game reset");
         
-        player.transform.position = playerStart.transform.position;
+        player.Reposition(playerStart.transform.position);
+        player.Reset();
+        player.Invoke("Revive", 0.5f);
     }
 
     /**
