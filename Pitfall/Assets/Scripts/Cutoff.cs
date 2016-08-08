@@ -13,7 +13,7 @@ public class Cutoff : MonoBehaviour {
     /**
      * Set the cutoff point for the material, anything below this point will have full transparency
      */
-    void SetCutoff (float y)
+    public void SetCutoff (float y)
     {
         cutoffMat.SetFloat("_Cutoff", y);
     }

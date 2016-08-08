@@ -9,8 +9,6 @@ public class GroundState : IPlayerState {
 
     private readonly PlayerController player;
 
-    private float targetSpeed;
-
     public GroundState(PlayerController playerController)
     {
         player = playerController;
@@ -24,7 +22,7 @@ public class GroundState : IPlayerState {
         if (player.CheckGrounded())
         {
             // calculate target speed based on horizontal input
-            targetSpeed = player.horizontalAxis * player.speed;
+            float targetSpeed = player.horizontalAxis * player.speed;
 
             // set the horizontal velocity based on how far the H axis is pressed
             player.rigidbody2d.velocity = new Vector2(targetSpeed, player.rigidbody2d.velocity.y);

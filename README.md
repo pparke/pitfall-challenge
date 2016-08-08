@@ -1,7 +1,7 @@
 # Pitfall Challenge
 ##### July 25, 2016
 
-Unity development challenge for a potential position with Telos Entertainment.
+Unity development challenge.
 
 ## Objective
 
@@ -14,6 +14,8 @@ To develop a simple prototype of the classic game Pitfall
   - https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-character-controllers
   - https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
   - https://unity3d.com/learn/tutorials/topics/user-interface-ui/ui-canvas?playlist=17111
+- **Books**
+  - [Mastering Unity 2D Game Development](https://www.packtpub.com/game-development/mastering-unity-2d-game-development)
 - **Youtube tutorials**
   - [Games Plus James 2D Platformer Tutorial](https://www.youtube.com/playlist?list=PLiyfvmtjWC_Up8XNvM3OSqgbJoMQgHkVz) provided a great deal of inspiration
 - **Other**

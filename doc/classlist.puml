@@ -6,60 +6,132 @@ class BarrelController {
  + speed : float
  + offscreenLeft : float
  - animator : Animator
+ bool IsOffLeftSide()
 }
 
 class BarrelSpawner {
+  + barrel : GameObject
+  + pattern : List<float>
+  - _cursor : int
+  - mainCamera : Camera
+  - next : float
+  void SpawnBarrel()
+  void MoveOffScreen()
+  + void SetPattern()
 }
 
 class CheckpointController {
+  - gameManager : GameManager
 }
 
 class ClimbState {
-}
-
-class CrocodileBehaviour {
+  - player : PlayerController
+  - prevGravity: float
 }
 
 class CrocodileMouthController {
+  - animator : Animator
+  - behaviours : CrocodileBehaviour[]
+  + open : bool
+  + openDuration : float
+  + closedDuration : float
+  + void OpenMouth()
+  + void CloseMouth()
 }
 
 class Cutoff {
+  + cutoffMat : Material
+  + void SetCutoff()
 }
 
 class DamageState {
+  - player : PlayerController
+  - enterTime : float
+  - exitDelay : float
 }
 
 class DeadState {
+  - player : PlayerController
+  - playerDead : PlayerDeadBehaviour
 }
 
 class ExitController {
+  - segment : SegmentData
+  - colliding : false
 }
 
 class FollowCamera {
+  + buffer : float
+  + panSpeed : float
+  + minY : float
+  + maxY : float
+  bool pastBuffer()
 }
 
 class GameManager {
+  + gameDuration : int
+  - timeRemaining : int
+  - player : PlayerController
+  + checkpoint : GameObject
+  + playerStart : GameObject
+  + buttonDelay : float
+  - lastPress : float
+  - durationInSeconds : int
+  void Tick()
+  + void ResetPlayer()
+  + void Reset()
+  + void SetCheckpoint
+  + void ExitGame()
+  + void MainMenu()
+  + void StartGame()
+  + void ToggleExitPanel()
 }
 
 class GroundState {
+  - player : PlayerController
 }
 
 class IPlayerState {
+  void fixedUpdate()
+  void update()
+  void onTriggerEnter()
+  void onTriggerStay()
+  void enter()
+  void exit()
 }
 
 class JumpState {
+  - player : PlayerController
+  - exitDelay : float
+  - lastJump : float
+  - boostUsed : bool
 }
 
 class LimboState {
+  - player : PlayerController
+  - prevGravity : float
 }
 
 class MenuManager {
+  + void StartGameButton()
+  + void ExitGameButton()
+  void StartGame()
+  void ExitGame()
 }
 
 class PickupController {
+  + particle : GameObject
 }
 
 class PitController {
+  - animator : Animator
+  - behaviours : PitBehaviour[]
+  + quicksand : bool
+  + open : bool
+  + openDuration : float
+  + closedDuration : float
+  + void OpenPit()
+  + void ClosePit()
 }
 
 class PlayerController {
@@ -85,21 +157,64 @@ class PlayerController {
  + facingRight : bool
  + score : int
  + lives : int
+ + void ChangeState()
+ + void CheckGrounded()
+ + void FaceForward()
+ + void Flip()
+ + void Kill()
+ + void TakeDamage()
+ + void AddPoints()
+ + void Reset()
+ + void Reposition()
+ + void Revive()
 }
 
 class SceneFadeInOut {
+  + {static} fadeSpeed : float
+  + {static} fade : bool
+  + {static} fader : Image
+  delegate void TransitionHandler()
+  - {static} transition : TransitionHandler
+  + delegate void CompleteHandler()
+  + {static} onComplete CompleteHandler
+  {static} void FadeToClear()
+  {static} void FadeToBlack()
+  + {static} void StartScene()
+  + {static} void EndScene()
+  - {static} void Init()
 }
 
 class SegmentData {
+  + barrelPattern : List<float>
+  + newSpawn : float
+  - active : bool
+  - barrelSpawn : BarrelSpawner
+  void Enter()
+  void Exit()
+  + void Toggle()
+  + void AddSpawn()
 }
 
 class SegmentDataEditor {
 }
 
 class SwingState {
+  - player : PlayerController
+  - prevGravity : float
+  - hingejoint2d : HingeJoint2D
 }
 
 class UIManager {
+  - {static} scoreText : Text
+  - {static} timeText : Text
+  - {static} livesImage : Image
+  - {static} quitMenu : Canvas
+  - {static} menuActive : bool
+  + {static} lifeWidth : float
+  + {static} void SetScore()
+  + {static} void SetTime()
+  + {static} void SetLives()
+  + {static} void ToggleExitPanel()
 }
 
 class VineController {
