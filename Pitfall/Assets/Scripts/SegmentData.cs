@@ -32,8 +32,7 @@ public class SegmentData : MonoBehaviour {
     {
         if (barrelPattern.Count > 0)
         {
-            barrelSpawn.enabled = true;
-            barrelSpawn.pattern = barrelPattern;
+            barrelSpawn.SetPattern(barrelPattern);
         }
         else
         {

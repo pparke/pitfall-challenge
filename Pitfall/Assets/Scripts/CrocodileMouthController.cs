@@ -61,7 +61,6 @@ public class CrocodileMouthController : MonoBehaviour {
         {
             if (coll.gameObject.tag == "Player")
             {
-                Debug.Log("sending kill message");
                 coll.gameObject.SendMessage("Kill");
             }
         }

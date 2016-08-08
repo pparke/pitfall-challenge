@@ -62,11 +62,11 @@ public class LimboState : IPlayerState {
         // reset the player or the game
         if (player.lives <= 0)
         {
-            player.gameManager.Reset();
+            SceneFadeInOut.EndScene(new SceneFadeInOut.CompleteHandler(player.gameManager.MainMenu));
         }
         else
         {
-            player.gameManager.ResetPlayer();
+            SceneFadeInOut.EndScene(new SceneFadeInOut.CompleteHandler(player.gameManager.ResetPlayer));
         }
     }
 

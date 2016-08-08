@@ -8,7 +8,7 @@
 
 ## Environment
 - [x] contains upper and lower level
-- [ ] 1 long scene (camera moves smoothly with player character)
+- [x] 1 long scene (camera moves smoothly with player character)
 
 ## Enemy/obstacle type per screen
 - [x] holes to jump over
@@ -26,10 +26,10 @@
   - [x] vine swings left and right
   - [x] on colliding with vine, player character becomes attached
   - [x] on pressing jump, player character detaches
-- [ ] lives
+- [x] lives
   - [x] player given 3 lives
   - [x] must decrement a life each time they die
-  - [ ] game restarts on death
+  - [x] game restarts on death
 
 
 # Folder Structure

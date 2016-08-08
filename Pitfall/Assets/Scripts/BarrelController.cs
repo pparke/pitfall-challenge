@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Responsible for barrel behaviour such as rolling, damaging the player,
+ * and despawning when offscreen 
+ */
 public class BarrelController : MonoBehaviour {
 
     private Camera mainCamera;
@@ -46,7 +50,9 @@ public class BarrelController : MonoBehaviour {
         
     }
 	
-
+    /**
+     * Damage the player on contact
+     */
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
@@ -55,6 +61,9 @@ public class BarrelController : MonoBehaviour {
         }
     }
 
+    /**
+     * Despawn when far enough off the left side of the screen
+     */
     bool IsOffLeftSide ()
     {
         // get the position of the barrel in viewport coords

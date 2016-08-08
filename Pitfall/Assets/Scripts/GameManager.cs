@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
+
 
 /**
  * Handles higher level interaction between the game or level and their contained objects.
@@ -8,22 +10,45 @@ using System.Collections;
  */
 public class GameManager : MonoBehaviour {
 
-    private int maxTime = 60 * 20;
+    public int gameDuration = 20;
     private int timeRemaining;
-    private int score = 2000;
     private PlayerController player;
     public GameObject checkpoint;
     public GameObject playerStart;
 
+    // delay for button press
+    public float buttonDelay = 0.2f;
+    private float lastPress = 0.0f;
+
+    private int durationInSeconds
+    {
+        get
+        {
+            return gameDuration * 60;
+        }
+    }
+
+    void Awake ()
+    {
+        // get the player
+        player = (PlayerController)GameObject.Find("Player").GetComponent(typeof(PlayerController));
+    }
+
 	// Use this for initialization
 	void Start () {
-        timeRemaining = maxTime;
+        timeRemaining = durationInSeconds;
 
         // start the clock
         InvokeRepeating("Tick", 0, 1.0f);
+    }
 
-        // get the player
-        player = (PlayerController)GameObject.Find("Player").GetComponent(typeof(PlayerController));
+    void Update ()
+    {
+        if (Input.GetAxis("Cancel") != 0.0f && lastPress + buttonDelay < Time.time)
+        {
+            lastPress = Time.time;
+            ToggleExitPanel();
+        }
     }
 	
     /**
@@ -49,7 +74,8 @@ public class GameManager : MonoBehaviour {
     public void Reset ()
     {
         Debug.Log("Game reset");
-        
+
+        timeRemaining = durationInSeconds;
         player.Reposition(playerStart.transform.position);
         player.Reset();
         player.Invoke("Revive", 0.5f);
@@ -61,5 +87,45 @@ public class GameManager : MonoBehaviour {
     public void SetCheckpoint (GameObject check)
     {
         checkpoint = check;
+    }
+
+    public void UpdateUI ()
+    {
+        // update score display
+        UIManager.SetScore(player.score);
+        // update the lives display
+        UIManager.SetLives(player.lives);
+    }
+
+    /**
+     * Quit the game
+     */
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    /**
+     * Go to the main menu
+     */
+    public void MainMenu ()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    /**
+     * Start the main gameplay scene
+     */
+    public void StartGame ()
+    {
+        SceneManager.LoadScene("Play");
+    }
+
+    /**
+     * Show and hide the exit panel
+     */
+    public void ToggleExitPanel ()
+    {
+        UIManager.ToggleExitPanel();
     }
 }

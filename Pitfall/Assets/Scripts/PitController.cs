@@ -12,6 +12,9 @@ public class PitController : MonoBehaviour {
     // reference to the state machine behaviour used to listen for events during animation
     private PitBehaviour[] behaviours;
 
+    // does this pit act as quicksand (opens and closes)
+    public bool quicksand = false;
+
     // is the pit currently open
     public bool open = false;
 
@@ -29,6 +32,8 @@ public class PitController : MonoBehaviour {
     void Awake()
     {
         animator = (Animator)transform.GetComponent(typeof(Animator));
+
+        animator.enabled = quicksand;
 
         // get the associated pit behaviours
         behaviours = animator.GetBehaviours<PitBehaviour>();

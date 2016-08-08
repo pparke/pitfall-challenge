@@ -1,34 +1,112 @@
 @startuml
-class PlayerController {
- - playerSprite : GameObject
+class BarrelController {
+ - mainCamera : Camera
+ + rolling : bool
  - rigidbody2d : Rigidbody2D
+ + speed : float
+ + offscreenLeft : float
  - animator : Animator
- - horizontalAxis : float
- - verticalAxis : float
- - facingRight : bool
- - grounded : bool
- + groundCheck : Collider2D
- + groundMask : LayerMask
+}
+
+class BarrelSpawner {
+}
+
+class CheckpointController {
+}
+
+class ClimbState {
+}
+
+class CrocodileBehaviour {
+}
+
+class CrocodileMouthController {
+}
+
+class Cutoff {
+}
+
+class DamageState {
+}
+
+class DeadState {
+}
+
+class ExitController {
+}
+
+class FollowCamera {
+}
+
+class GameManager {
+}
+
+class GroundState {
+}
+
+class IPlayerState {
+}
+
+class JumpState {
+}
+
+class LimboState {
+}
+
+class MenuManager {
+}
+
+class PickupController {
+}
+
+class PitController {
+}
+
+class PlayerController {
+ - currentState : IPlayerState
+ - states : Dictionary<string, IPlayerState>
+ - playerSprite : GameObject
+ + gameManager : gameManager
+ + rigidbody2d : Rigidbody2D
+ + animator : Animator
+ + hingejoint2d : HingeJoint2D
+ + collidedWith : Collider2D
  + speed : float
  + jumpForce : float
- - jumpPressed : bool
- - jumping : bool
- + lives : int
+ + jumpBoost : float
+ + horizontalForce : float
+ + horizontalCorrection : float
+ + jumpPressed : bool
+ + jumpPressedDuration : float
+ + horizontalAxis : float
+ + verticalAxis : float
+ + groundCheck : Collider2D
+ + groundMask : LayerMask
+ + facingRight : bool
  + score : int
- + time : int
+ + lives : int
 }
 
-class Crocodile {
- + mouthOpen : bool
+class SceneFadeInOut {
 }
 
-class Barrel {
- - speed : int
+class SegmentData {
+}
+
+class SegmentDataEditor {
+}
+
+class SwingState {
+}
+
+class UIManager {
 }
 
 class VineController {
  + amplitude : float
  + period : float
+ + phaserShift : float
  - elapsedTime : float
+ + y : float
 }
 @enduml

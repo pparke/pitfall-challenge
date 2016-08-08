@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Listens for events during the crocodile animation and triggers
+ * methods on the crocodile object
+ */
 public class CrocodileBehaviour : StateMachineBehaviour {
 
     public CrocodileMouthController mouth;
@@ -11,12 +15,12 @@ public class CrocodileBehaviour : StateMachineBehaviour {
         {
             if (stateInfo.IsName("CrocodileClosed"))
             {
-                Debug.Log("state is closed");
+                // remain closed for the set duration
                 mouth.Invoke("OpenMouth", mouth.closedDuration);
             }
             else if (stateInfo.IsName("CrocodileOpen"))
             {
-                Debug.Log("state is open");
+                // remain open for the set duration
                 mouth.Invoke("CloseMouth", mouth.openDuration);
             }
         }

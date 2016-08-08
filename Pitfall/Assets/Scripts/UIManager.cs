@@ -10,12 +10,21 @@ public class UIManager : MonoBehaviour {
 
     private static Text scoreText;
     private static Text timeText;
-    private static Text livesText;
+    private static Image livesImage;
+    private static Canvas quitMenu;
 
-    void Awake ()
+    private static bool menuActive = false;
+
+    public static float lifeWidth = 12.0f;
+
+
+    void Awake()
     {
         scoreText = (Text)GameObject.Find("Canvas/Score").GetComponent(typeof(Text));
         timeText = (Text)GameObject.Find("Canvas/Time").GetComponent(typeof(Text));
+        livesImage = (Image)GameObject.Find("Canvas/Lives").GetComponent(typeof(Image));
+        quitMenu = (Canvas)GameObject.Find("QuitMenu").GetComponent(typeof(Canvas));
+        Debug.Log(quitMenu);
     }
 
     /**
@@ -32,5 +41,16 @@ public class UIManager : MonoBehaviour {
     public static void SetTime (int minutes, int seconds)
     {
         timeText.text = string.Format("{0}:{1}", minutes.ToString("D2"), seconds.ToString("D2"));
+    }
+
+    public static void SetLives (int amt)
+    {
+        livesImage.rectTransform.sizeDelta = new Vector2(amt * lifeWidth, livesImage.rectTransform.sizeDelta.y);
+    }
+
+    public static void ToggleExitPanel ()
+    {
+        menuActive = !menuActive;
+        quitMenu.enabled = menuActive;
     }
 }

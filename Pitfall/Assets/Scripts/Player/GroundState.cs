@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Defines player behaviour when on the ground (walking)
+ * based on https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
+ */
 public class GroundState : IPlayerState {
 
     private readonly PlayerController player;

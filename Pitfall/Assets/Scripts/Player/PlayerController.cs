@@ -5,6 +5,7 @@ using System.Collections.Generic;
 /**
  * Main player controller script.  Contains fields and methods used by various states
  * delegates most events to the current state.
+ * Based partly on the unity tutorial for 2D character controller https://unity3d.com/learn/tutorials/topics/2d-game-creation/2d-character-controllers
  */
 public class PlayerController : MonoBehaviour {
 
@@ -107,10 +108,7 @@ public class PlayerController : MonoBehaviour {
         currentState = states["ground"];
         currentState.enter();
 
-        // display player's score
-        UIManager.SetScore(score);
-
-        // display player's lives
+        gameManager.UpdateUI();
     }
 	
 	/**
@@ -242,11 +240,13 @@ public class PlayerController : MonoBehaviour {
      */
     public void Kill ()
     {
-        Debug.Log("killing player");
         // only enter state if not already in it
         if (currentState != states["dead"])
         {
             ChangeState("dead");
+
+            // update UI
+            gameManager.UpdateUI();
         }
     }
 
@@ -255,14 +255,24 @@ public class PlayerController : MonoBehaviour {
      */
     public void TakeDamage (int amt)
     {
-        Debug.Log("Taking damage");
         // reduce player's score
         score -= amt;
 
-        // update score display
-        UIManager.SetScore(score);
+        // update UI
+        gameManager.UpdateUI();
 
         ChangeState("damage");
+    }
+
+    /**
+     * Add points to the player's score
+     */
+    public void AddPoints (int amt)
+    {
+        score += amt;
+
+        // update UI
+        gameManager.UpdateUI();
     }
 
     /**
@@ -273,7 +283,7 @@ public class PlayerController : MonoBehaviour {
         lives = 3;
         score = 2000;
         ChangeState("ground");
-        UIManager.SetScore(score);
+        gameManager.UpdateUI();
     }
 
     /**

@@ -4,6 +4,7 @@ using System.Collections;
 /**
  * Will pan the camera that it is attached to as the player moves,
  * uses a buffer zone to limit camera movement.
+ * based on code found in Mastering Unity 2D Game Development by Simon Jackson https://www.packtpub.com/game-development/mastering-unity-2d-game-development
  */
 public class FollowCamera : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class FollowCamera : MonoBehaviour {
     // camera pan speed
     public float panSpeed = 2.5f;
 
+    // limit camera movement between these two y values
     public float minY = -0.1f;
     public float maxY = 2.0f;
 

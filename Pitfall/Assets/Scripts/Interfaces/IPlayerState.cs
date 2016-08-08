@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Interface for player state used in the state machine in PlayerController
+ * based on https://unity3d.com/learn/tutorials/topics/scripting/using-interfaces-make-state-machine-ai?playlist=17117
+ */
 public interface IPlayerState {
 
     // physics related update

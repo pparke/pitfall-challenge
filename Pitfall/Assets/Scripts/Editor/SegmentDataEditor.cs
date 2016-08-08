@@ -2,7 +2,10 @@
 using System.Collections;
 using UnityEditor;
 
-
+/**
+ * Add a custom editor button to the SegmentData script allowing us
+ * to add additional barrel spawns
+ */
 [CustomEditor(typeof(SegmentData))]
 public class SegmentDataEditor : Editor {
 
